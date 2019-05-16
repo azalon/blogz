@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+
+<header>
+        
+            
+        
+                All Posts
+            
+     
+        
+    </header>
+{% block content %}
+
+
+
+
+
+
+    {% if all_posts|length == 0 %}
+    <p> No posts yet </p>
+    
+        
+{% else %}
+
+        <ul>
+            {% for blog in all_posts %}
+           <a href="/blog?id={{blog.id}}">
+            <li> {{blog.title}} </a> 
+
+                
+                <br> {{blog.body}} </li>
+            {% endfor %}
+        </ul>
+
+    {% endif %}
+
+
+
+{% endblock %}
