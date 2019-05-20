@@ -1,0 +1,38 @@
+
+
+{% extends "base.html" %}
+
+{% block content %}
+           
+            <p> Log in to Account </p> 
+          
+             <body>
+                 <form action="/login" method="post">
+                     <label> Enter username
+                         <input type="text" name="username" value="{{username}}"/>
+                     </label>
+                     
+                     <br>
+                     
+                     
+                     <br>
+                     <label> Enter password
+                         <input type="password" name="password" value="{{password}}" />
+                     </label>
+                    
+                     
+                     <br> <br>
+                     <label> Re-enter Password
+                         <input type="password" name="password_verify" value="{{password_verify}}"/>
+                     </label>  
+                  
+                     <br>
+                     <input type="submit" value="Submit" />  
+                 </form>
+                <p>Don't Have An Account?</p>
+                 <a href="/signup">
+                    <p> Create Account </p> 
+                 </a> 
+           
+
+{% endblock %}

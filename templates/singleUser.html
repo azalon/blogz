@@ -1,0 +1,26 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1> All posts by {{owner.username}}</h1>
+
+<ul>
+{% for post in all_posts %}
+          
+
+              <li><a href="/blog?post_id={{post.id}}">{{post.title}}</a>
+                  <br>
+             
+               
+                
+                  {{post.body}}
+                  <br>
+                  Written by {{owner.username}}
+              </li>
+            
+          {% endfor %}
+</ul>
+
+{% endblock %}
+

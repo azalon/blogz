@@ -1,0 +1,42 @@
+
+
+{% extends "base.html" %}
+
+{% block content %}
+           
+            <p> Create Account </p> 
+         
+             <body>
+                 <form action="/signup" method="post">
+                     <label> Enter username
+                         <input type="text" name="username" value="{{username}}"/>
+                     </label>
+                     <p class="error"> {{username_error}}</p>
+                     <p class="error"> {{duplicate_error}}</p>
+                
+                
+                     <p class="error"> {{length_error}}</p>
+
+                    
+                     <br>
+                     
+                     
+                     <br>
+                     <label> Enter password
+                         <input type="password" name="password" value="{{password}}" />
+                     </label>
+                     <p class="error"> {{length_error_2}}</p>
+                     <p class="error"> {{password_error}}</p>
+                     
+                     <br>
+                     <label> Re-enter Password
+                         <input type="password" name="password_verify" value="{{password_verify}}"/>
+                     </label>  
+                     <p class="error"> {{password_error_2}}</p>
+                     <p class="error"> {{verify_error}}</p>
+                     <br>
+                     <input type="submit" value="Submit" />  
+                 </form>
+           
+
+{% endblock %}

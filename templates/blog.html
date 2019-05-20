@@ -25,11 +25,15 @@
 
         <ul>
             {% for blog in all_posts %}
-           <a href="/blog?id={{blog.id}}">
+           <a href="/blog?post_id={{blog.id}}">
             <li> {{blog.title}} </a> 
 
                 
-                <br> {{blog.body}} </li>
+                <br> {{blog.body}} 
+                <br>
+                Written by {{blog.owner.username}}
+               
+            </li>
             {% endfor %}
         </ul>
 

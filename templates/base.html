@@ -12,6 +12,39 @@
 </nav>
     </head>
     <body>
+            {% if 'user' in session %}
+             {{session['user']}} is logged in!
+             
+            <div>
+                    <a href='/logout'>log out</a>
+                </div>
+
+                <div>
+                        <a href='/'>Home</a>
+                    </div>
+                
+
+
+               {% else %}
+             
+                <div>
+                        <a href='/login'>log in</a>
+                    </div>
+            {% endif %}
+
+
+                    
+                       
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul class=flashes>
+        {% for message in messages%}
+        <li> {{message}} </li>
+        {% endfor %}
+        
+        </ul>
+        {%endif%}
+        {%endwith%}
         <h1>{{title}}</h1>
         {% block content %}
         {% endblock %}
