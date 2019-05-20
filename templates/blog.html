@@ -31,7 +31,7 @@
                 
                 <br> {{blog.body}} 
                 <br>
-                Written by {{blog.owner.username}}
+                Written by <a href="/blog?user={{blog.owner.username}}">{{blog.owner.username}}</a>
                
             </li>
             {% endfor %}

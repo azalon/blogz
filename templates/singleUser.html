@@ -16,7 +16,7 @@
                 
                   {{post.body}}
                   <br>
-                  Written by {{owner.username}}
+                  Written by <a href="/blog?user={{post.owner.username}}">{{owner.username}}</a>
               </li>
             
           {% endfor %}
